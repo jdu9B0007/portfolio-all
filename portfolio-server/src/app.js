@@ -30,6 +30,10 @@ app.use(express.static(path.resolve(__dirname, "../../portfolio-client/dist")));
 
 app.use(cors({ origin: '*' }));
 
+app.get('/test', (req, res)=>{
+  res.status(200).json({message: 'asd'});
+})
+
 // Configure routes
 configureRoutes(app);
 
